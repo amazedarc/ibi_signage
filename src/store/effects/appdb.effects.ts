@@ -171,7 +171,7 @@ export class AppDbEffects {
         .map(authStatus => ({type: EFFECT_AUTH_END, payload: authStatus}));
 
     private authUser(action: Action): Observable<any> {
-        console.log('authenticating');
+        console.log('authenticating..............................');
         this.toastr.clearAllToasts();
         this.toastr.warning('Authenticating, please wait');
         let userModel: UserModel = action.payload;
@@ -216,6 +216,7 @@ export class AppDbEffects {
                     // Authenticated
 
                     console.log('authenticating check account type');
+                    console.log('bravooo......');
                     if (pepperConnection.pepperAuthReply.warning == 'not a studioLite account') {
                         userModel = userModel.setAccountType(AuthenticateFlags.USER_ACCOUNT_PRO);
                         var snippet = `

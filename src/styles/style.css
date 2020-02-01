@@ -1,16 +1,33 @@
 /*@import url(https://fonts.googleapis.com/css?family=Montserrat);*/
 
+
 /*@font-face {*/
+
+
 /*font-family: 'Montserrat';*/
+
+
 /*font-style: normal;*/
+
+
 /*font-weight: 400;*/
+
+
 /*src: local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v7/zhcz-_WihjSQC0oHJ9TCYPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');*/
+
+
 /*unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;*/
+
+
 /*}*/
 
 @media print {
-    @page { margin: 0; }
-    body { margin: 1.6cm; }
+    @page {
+        margin: 0;
+    }
+    body {
+        margin: 1.6cm;
+    }
 }
 
 @font-face {
@@ -30,7 +47,8 @@ select {
     border-radius: 0 !important;
 }
 
-button, a {
+button,
+a {
     border-radius: 0 !important;
 }
 
@@ -80,7 +98,7 @@ a {
 .appMenu {
     padding: 0px;
     margin: 0px;
-    background-color: #3e3f48;
+    background: linear-gradient(#1A2980, #23ABBD);
     border-right: 1px solid #dddddd;
     font-size: 1.1em;
     /* enable following for dropshadow on appNavPanel */
@@ -92,18 +110,19 @@ a {
 
 .appMenu li {
     cursor: pointer;
-    background-color: #3e3f48;
-    border-color: #3e3f48;
+    background-color: #156290;
+    border-color: #156290;
     padding-top: 15px;
     padding-bottom: 15px;
     border-right: 0px;
 }
 
-.appMenu span, #appMenu i {
+.appMenu span,
+#appMenu i {
     color: white;
 }
 
-.appMenu i {
+i {
     padding: 5px;
     color: #cbcbcb;
 }
@@ -127,7 +146,7 @@ a {
 }
 
 #appNavigatorWasp li:hover {
-    /*bootstrap theme color*/;
+    /*bootstrap theme color*/
     background-color: #428bca;
     color: white;
 }
@@ -146,7 +165,7 @@ a {
 }
 
 #appNavigatorWasp li:hover {
-    /*bootstrap theme color*/;
+    /*bootstrap theme color*/
     background-color: #428bca;
     color: white;
 }
@@ -166,7 +185,6 @@ a {
 .noSpace {
     padding: 0;
     margin: 0;
-
 }
 
 .yScroll {
@@ -186,7 +204,6 @@ a {
 
 .form-signin {
     max-width: 330px;
-    padding: 15px;
     margin: 0 auto;
 }
 
@@ -202,7 +219,8 @@ a {
 .form-signin .form-control {
     position: relative;
     font-size: 16px;
-    height: auto;
+    height: 34px;
+    margin: 10px 4px;
     padding: 10px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -267,6 +285,7 @@ a {
     height: 100%;
 }
 
+
 /************************************
  Hardware accelerated horizontal
 /************************************
@@ -290,6 +309,7 @@ a {
 }
 */
 
+
 /************************************
  Software accelerated horizontal
 /************************************
@@ -312,6 +332,7 @@ a {
     transition-duration: .50s;
 }
 
+
 /************************************
 Software accelerated vertical
 /************************************
@@ -331,6 +352,7 @@ Software accelerated vertical
     transition-duration: 0.65s;
 }
 */
+
 
 /************************************
  Hardware accelerated vertical
@@ -355,12 +377,25 @@ Software accelerated vertical
 }
 */
 
+
 /*#logoContainer {*/
+
+
 /*position: relative;*/
+
+
 /*top: -3px;*/
+
+
 /*float: left;*/
+
+
 /*padding: 0;*/
+
+
 /*margin: 0;*/
+
+
 /*}*/
 
 .clearFloat {
@@ -372,24 +407,25 @@ Software accelerated vertical
     margin-bottom: 8px;
 }
 
+
 /* material switches */
 
 .material-switch {
     padding-left: 7px;
 }
 
-.material-switch > input[type="checkbox"] {
+.material-switch>input[type="checkbox"] {
     display: none;
 }
 
-.material-switch > label {
+.material-switch>label {
     cursor: pointer;
     height: 0px;
     position: relative;
     width: 40px;
 }
 
-.material-switch > label::before {
+.material-switch>label::before {
     background: rgb(0, 0, 0);
     border-radius: 8px;
     content: '';
@@ -401,7 +437,7 @@ Software accelerated vertical
     width: 40px;
 }
 
-.material-switch > label::after {
+.material-switch>label::after {
     background: rgb(255, 255, 255);
     border-radius: 16px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
@@ -415,12 +451,12 @@ Software accelerated vertical
     width: 24px;
 }
 
-.material-switch > input[type="checkbox"]:checked + label::before {
+.material-switch>input[type="checkbox"]:checked+label::before {
     background: inherit;
     opacity: 0.5;
 }
 
-.material-switch > input[type="checkbox"]:checked + label::after {
+.material-switch>input[type="checkbox"]:checked+label::after {
     background: inherit;
     left: 20px;
 }
@@ -429,7 +465,6 @@ Software accelerated vertical
     -webkit-perspective: 800px;
     -ms-perspective: 800px;
     -moz-perspective: 800px;
-
     width: 39px;
     height: 25px;
     position: relative;
@@ -448,7 +483,6 @@ Software accelerated vertical
     -webkit-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
-
     -webkit-transition: 0.5s;
     -ms-transition: 0.5s;
     -moz-transition: 0.5s;
@@ -506,6 +540,7 @@ Software accelerated vertical
     padding-bottom: 50px;
 }
 
+
 /** SimpleTable **/
 
 .selectedTr {
@@ -527,7 +562,7 @@ Software accelerated vertical
     right: 0;
     bottom: 0;
     overflow: auto;
-    background: #222;
+    background: linear-gradient(#1A2980, #23ABBD);
     text-align: center;
     color: #fff;
     padding: 3em;
@@ -540,18 +575,21 @@ Software accelerated vertical
 .login-page .input-lg {
     height: 46px;
     padding: 10px 16px;
-    font-size: 18px;
-    line-height: 1.3333333;
-    border-radius: 0;
+    font-size: 14px;
+    width: 280px;
+    line-height: 1.42857143;
+    border-radius: 10px;
 }
 
 .login-page .input-underline {
     background: 0 0;
-    border: none;
+    border: 1px solid;
     box-shadow: none;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-    color: #FFF;
+    border-color: #d2d6d2;
+    /* border-bottom: 2px solid rgba(255, 255, 255, 0.5); */
+    color: rgba(65, 65, 65, 0.8);
     border-radius: 0;
+    background-color: #FFF;
 }
 
 .login-page .input-underline:focus {
@@ -563,14 +601,18 @@ Software accelerated vertical
     -webkit-border-radius: 50px;
     border-radius: 50px;
     color: rgba(255, 255, 255, 0.8);
-    background: #222;
-    border: 2px solid rgba(255, 255, 255, 0.8);
+    background: #23ABBD;
+    border: 2px solid #23ABBD;
     font-size: 18px;
     line-height: 40px;
     padding: 0 25px;
+    margin-bottom: 10px;
 }
 
-.login-page .rounded-btn:hover, .login-page .rounded-btn:focus, .login-page .rounded-btn:active, .login-page .rounded-btn:visited {
+.login-page .rounded-btn:hover,
+.login-page .rounded-btn:focus,
+.login-page .rounded-btn:active,
+.login-page .rounded-btn:visited {
     color: white;
     border: 2px solid white;
     outline: none;
@@ -653,9 +695,11 @@ small {
     top: -10px
 }
 
+
 /**
  for hovers see: http://ianlunn.github.io/Hover/
 **/
+
 .hvr-grow-shadow {
     display: inline-block;
     vertical-align: middle;
@@ -668,7 +712,9 @@ small {
     transition-property: box-shadow, transform;
 }
 
-.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+.hvr-grow-shadow:hover,
+.hvr-grow-shadow:focus,
+.hvr-grow-shadow:active {
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
@@ -705,7 +751,8 @@ small {
     }
 }
 
-a.list-group-item:focus, button.list-group-item:focus {
+a.list-group-item:focus,
+button.list-group-item:focus {
     background-color: #c4c4c4;
 }
 
@@ -727,9 +774,11 @@ a.list-group-item:focus, button.list-group-item:focus {
     top: 20px;
 }
 
-.bootstrap-timepicker-widget a.btn, .bootstrap-timepicker-widget input {
+.bootstrap-timepicker-widget a.btn,
+.bootstrap-timepicker-widget input {
     border-radius: 0px;
 }
+
 
 /************************************
  ColorPicker
@@ -753,7 +802,7 @@ a.list-group-item:focus, button.list-group-item:focus {
     background: url("../assets/select.png") center;
 }
 
-.color-chooser > div {
+.color-chooser>div {
     width: 30px;
     height: 30px;
     background: url("../assets/select.png") center;
@@ -862,11 +911,11 @@ a.list-group-item:focus, button.list-group-item:focus {
     position: absolute;
 }
 
-.colorpicker_field > input {
+.colorpicker_field>input {
     width: 42px;
 }
 
-.colorpicker_hex > input {
+.colorpicker_hex>input {
     width: 42px;
 }
 
@@ -942,6 +991,7 @@ a.list-group-item:focus, button.list-group-item:focus {
     background-position: bottom;
 }
 
+
 /************************************
  Gradient picker
  ************************************/
@@ -980,7 +1030,6 @@ a.list-group-item:focus, button.list-group-item:focus {
     height: 40px;
     z-index: 1;
     margin-top: 2px;
-
     background-color: white;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -1057,7 +1106,8 @@ i {
     width: 20px;
 }
 
-form .list-group, form .list-group-item {
+form .list-group,
+form .list-group-item {
     border: 0 none !important;
 }
 
@@ -1189,7 +1239,7 @@ form .list-group, form .list-group-item {
     background-color: gray;
 }
 
-.fqStats > div {
+.fqStats>div {
     border: solid 1px #b5b5b5;
     padding-top: 5px;
     margin-top: 5px;
@@ -1252,7 +1302,7 @@ form .list-group, form .list-group-item {
     transition: height 0.01s;
 }
 
-#toast-container > div {
+#toast-container>div {
     position: relative;
     overflow: hidden;
     margin: 0 0 6px;
@@ -1266,6 +1316,7 @@ form .list-group, form .list-group-item {
     color: #FFFFFF;
     opacity: 0.8;
 }
+
 
 /** Enjoy hint **/
 
@@ -1517,8 +1568,7 @@ form .list-group, form .list-group-item {
     left: 0;
 }
 
-.enjoyhint_svg {
-}
+.enjoyhint_svg {}
 
 .enjoyhint_svg_wrapper {
     position: absolute;
@@ -1540,7 +1590,8 @@ form .list-group, form .list-group-item {
     left: 0;
 }
 
-.enjoyhint_svg_transparent .enjoyhint_svg_wrapper, .enjoyhint_svg_transparent .enjoy_hint_label {
+.enjoyhint_svg_transparent .enjoyhint_svg_wrapper,
+.enjoyhint_svg_transparent .enjoy_hint_label {
     opacity: 0;
 }
 
@@ -1587,7 +1638,9 @@ div.kineticjs-content {
     opacity: 1 !important;
 }
 
+
 /**dev_mode_start**/
+
 small.debug {
     color: red;
     display: none !important;
@@ -1597,12 +1650,6 @@ small.release {
     text-transform: lowercase;
     color: #4c4c4c;
 }
+
+
 /**dev_mode_end**/
-
-
-
-
-
-
-
-

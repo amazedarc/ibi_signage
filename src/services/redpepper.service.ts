@@ -74,6 +74,7 @@ export class RedPepperService {
     public dbConnect(i_user, i_pass): Observable<any> {
         var self = this;
         return Observable.create(observer => {
+          console.log('dbconnect');
             self.m_loaderManager = new LoaderManager() as ILoadManager;
             self.databaseManager = self.m_loaderManager.m_dataBaseManager;
 

@@ -186,7 +186,7 @@ export class AuthService {
                 u: '',
                 p: '',
                 r: i_remember
-            });
+            }); 
         }
     }
 

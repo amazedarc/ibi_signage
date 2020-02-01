@@ -65,7 +65,7 @@ enum ViewMod {
     ],
     styles: [`
         a {
-            color: gray;
+            color: white;
         }
 
         a:visited {
@@ -82,6 +82,11 @@ enum ViewMod {
             <br/>
             <br/>
             <br/>
+            <div class = "logo" style="margin: 50px">
+           
+            <img src = "http://smart.ibi-africa.com/ibi2/logo.png">
+         
+            </div>
             <form class="form-signin" role="form">
                 <ul [ngSwitch]="m_currentViewMode">
 
@@ -89,8 +94,8 @@ enum ViewMod {
                     
                     <div *ngSwitchCase="m_viewMod.LOGIN">
                         <h2 class="form-signin-heading"></h2>
-                        <input (keyup.enter)="passFocus()" #userName id="userName" spellcheck="false" type="text" name="m_user" [(ngModel)]="m_user" class="input-underline input-lg form-control" i18n-placeholder placeholder="user name or email" required autofocus>
-                        <input (keyup.enter)="onClickedLogin()" #userPass id="userPass" type="password" [(ngModel)]="m_pass" name="m_pass" class="input-underline input-lg form-control" i18n-placeholder placeholder="password" required>
+                        <input (keyup.enter)="passFocus()" #userName id="userName" spellcheck="false" type="text" name="m_user" [(ngModel)]="m_user" class="input-underline input-lg form-control" i18n-placeholder placeholder="Email or username" required autofocus>
+                        <input (keyup.enter)="onClickedLogin()" #userPass id="userPass" type="password" [(ngModel)]="m_pass" name="m_pass" class="input-underline input-lg form-control" i18n-placeholder placeholder="Password" required>
                         <div [@showTwoFactor]="m_showTwoFactor" *ngIf="m_showTwoFactor">
                             <br/>
                             <br/>
@@ -107,9 +112,9 @@ enum ViewMod {
                         <br/>
                         <div style="width: 280px; position: relative">
                             <div class="pull-left" *ngIf="!m_showTwoFactor">
-                                <label class="checkbox" style="padding-left: 20px">
+                                <label class="checkbox" style="padding-left: 20px ">
                                     <input #rememberMe type="checkbox" [checked]="m_rememberMe" (change)="m_rememberMe = rememberMe.checked"/>
-                                    <span i18n style="color: gray"> remember me </span>
+                                    <span i18n style="color: white"> remember me </span>
                                 </label>
                             </div>
                             <div style="text-align: right" id="loginExtras" class="pull-right">
@@ -122,9 +127,7 @@ enum ViewMod {
                              <br/>
                         </div>
                         <div class="clearFloat"></div>
-                        <locale-selector [orientation]="'inline'"></locale-selector>
-                        <br/>
-                        <a i18n style="padding-left: 20px" href="https://secure.digitalsignage.com/msgetstarted/#selectStudioLite">Don't have an account? create one</a>
+                  <!--    <locale-selector [orientation]="'inline'"></locale-selector>-->
                     </div>
 
                     <div *ngSwitchCase="m_viewMod.CHANGE_PASSWORD">
@@ -258,7 +261,7 @@ export class LoginPanel extends Compbaser {
 
     onResetPassword() {
         if (!Lib.ValidateEmail(this.m_user))
-            return bootbox.alert('user name must be in the form of an email address');
+            return bootbox.alert('username must be in the form of an email address');
         this.rp.resetPassword(this.m_user, (value) => {
             if (!value.result)
                 return bootbox.alert('Sorry no account found');
@@ -271,7 +274,7 @@ export class LoginPanel extends Compbaser {
         if (this.m_passNew != this.m_passRepeat)
             return bootbox.alert('passwords do not match')
         if (this.m_user.length < 2)
-            return bootbox.alert('user name is too short')
+            return bootbox.alert('username is too short')
         this.rp.changePassword(this.m_user, this.m_pass, this.m_passNew, (value) => {
             if (value.result == -1)
                 return bootbox.alert('authentication for password change failed, try again');
@@ -284,9 +287,12 @@ export class LoginPanel extends Compbaser {
         if (this.m_showTwoFactor) {
             // this.toast.warning('Authenticating Two factor...');
             this.authService.authServerTwoFactor(this.m_twoFactor);
+            // console.log('clicked');
+
         } else {
             // this.toast.info('Authenticating...');
             this.authService.authUser(this.m_user, this.m_pass, this.m_rememberMe);
+            // console.log('clicked r');
         }
     }
 

@@ -33,16 +33,16 @@
                 <ng-menu-item [fontawesome]="'fa-heart'" i18n-title name="Help" title="Help"></ng-menu-item>
                 <ng-menu-item *ngIf="isBrandingDisabled" [fontawesome]="'fa-laptop'" i18n-title name="Install" title="Install"></ng-menu-item>
                 <!--<ng-menu-item [fontawesome]="'fa-cog'" name="Settings" title="'Settings'"></ng-menu-item>-->
-                <ng-menu-item [fontawesome]="'fa-cloud-upload'" i18n-title name="Studiopro" title="Studiopro"></ng-menu-item>
+           <!-- <ng-menu-item [fontawesome]="'fa-cloud-upload'" i18n-title name="Studiopro" title="Studiopro"></ng-menu-item>-->
                 <ng-menu-item [fontawesome]="'fa-power-off'" i18n-title name="Logout" title="Logout"></ng-menu-item>
             </ng-menu>
 
             <ul style="height: 20px" class="nav navbar-nav navbar-right noCollapsing">
                 <li>
-                    <a i18n-title title="upgrade" style="padding-bottom: 0px; margin-bottom: 0px" (click)="_onMenuIcon('upgrade',$event)" *ngIf="isBrandingDisabled" class="showUpgradeModal reshid" href="#"><i style="color: red" class="faHeader fa fa-cloud-upload"></i></a>
+                    <a i18n-title title="upgrade" style="padding-bottom: 0px; margin-bottom: 0px" (click)="_onMenuIcon('upgrade',$event)" *ngIf="isBrandingDisabled" class="showUpgradeModal reshid" href="#"><i style="color: white" class="faHeader fa fa-cloud-upload"></i></a>
                 </li>
                 <li>
-                    <a i18n-title title="Cont-S" style="padding-bottom: 0px; margin-bottom: 0px" (click)="_onMenuIcon('save',$event)" href="#"><i style="color: greenyellow" class="faHeader fa fa-save"></i></a>
+                    <a i18n-title title="Cont-S" style="padding-bottom: 0px; margin-bottom: 0px" (click)="_onMenuIcon('save',$event)" href="#"><i style="color: white" class="faHeader fa fa-save"></i></a>
                 </li>
                 <li>
                     <a i18n-title title="language" style="padding-bottom: 0px; margin-bottom: 0px" (click)="_onMenuIcon('locale',$event)" href="#"><i class="faHeader fa fa-question-circle"></i></a>

@@ -62,9 +62,10 @@ export class AppComponent implements AfterViewInit {
     // isBrandingDisabled: Observable<boolean>;
     syncOnSave = false;
     m_logoutState = '';
-    productName = 'Studio-Lite';
+    productName = 'IBI-AFRICA';
     isBrandingDisabled: boolean = false;
-    demoModeMsg = `Sorry cannot save while in demo mode, <a href="https://secure.digitalsignage.com/msgetstarted/#selectStudioLite">please open a new FREE account</a> to be able to use all features...`;
+    // demoModeMsg = `Sorry cannot save while in demo mode, <a href="https://secure.digitalsignage.com/msgetstarted/#selectStudioLite">please open a new FREE account</a> to be able to use all features...`;
+    demoModeMsg = `Sorry cannot save while in demo mode, <a href="#">please open a new FREE account</a> to be able to use all features...`;
 
     constructor(private router: Router,
                 private localStorage: LocalStorage,
@@ -136,11 +137,12 @@ export class AppComponent implements AfterViewInit {
         event.preventDefault();
         switch (icon) {
             case 'web': {
-                window.open('http://www.digitalsignage.com', '_blank');
+                window.open('http://www.ibi-africa.com', '_blank');
                 break;
             }
             case 'chat': {
-                window.open('http://www.digitalsignage.com/_html/live_chat.html', '_blank');
+                //window.open('http://www.digitalsignage.com/_html/live_chat.html', '_blank');
+                window.open('#', '_blank');
                 break;
             }
             case 'upgrade': {

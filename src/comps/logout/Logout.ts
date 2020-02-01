@@ -85,7 +85,7 @@ export class Logout extends Compbaser {
         this.yp.ngrxStore.dispatch(({type: ACTION_UISTATE_UPDATE, payload: uiState}))
         if (this.rp.getUserData().resellerID == 1)
             jQuery('body').fadeOut(1000, function () {
-                window.location.replace('http://www.digitalsignage.com');
+                window.location.replace('http://www.ibi-africa.com');
             });
     }
 }
